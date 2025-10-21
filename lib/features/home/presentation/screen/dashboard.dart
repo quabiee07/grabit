@@ -3,6 +3,7 @@ import 'package:grabit_mobile/core/presentation/utils/custom_state.dart';
 import 'package:grabit_mobile/core/presentation/widgets/bottom_nav_bar.dart';
 import 'package:grabit_mobile/features/home/presentation/manager/home_provider.dart';
 import 'package:grabit_mobile/features/home/presentation/screen/home.dart';
+import 'package:grabit_mobile/features/search/presentation/screens/search.dart';
 import 'package:provider/provider.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _DashboardScreenState extends CustomState<DashboardScreen> {
   void onStart() {
     _screens = [
       HomeScreen(),
-      Container(color: Colors.green),
+      SearchScreen(),
       Container(color: Colors.blue),
       Container(color: Colors.pink),
     ];

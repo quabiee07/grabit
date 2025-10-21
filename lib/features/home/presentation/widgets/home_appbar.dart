@@ -10,6 +10,9 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return AppBar(
+      foregroundColor: theme.colorScheme.surface,
+      backgroundColor: theme.colorScheme.surface,
+      forceMaterialTransparency: true,
       leading: Padding(
         padding: const EdgeInsets.only(left: 16.0),
         child: CircleIcon(asset: locationIcon),

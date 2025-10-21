@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:grabit_mobile/core/presentation/theme/colors/colors.dart';
 import 'package:grabit_mobile/core/presentation/widgets/clickable.dart';
 import 'package:grabit_mobile/core/presentation/widgets/custom_image.dart';
 import 'package:grabit_mobile/core/presentation/widgets/inputfield_state.dart';
@@ -74,7 +75,7 @@ class _InputFieldState extends TextFieldState<InputField> {
           textInputAction: widget.inputAction,
           style: theme.textTheme.labelMedium,
           inputFormatters: widget.inputFormatters ?? [],
-          cursorColor: theme.colorScheme.onSurface,
+          cursorColor: textColorLight,
           onTapOutside: (_) {
             focus.unfocus();
           },

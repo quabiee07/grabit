@@ -24,6 +24,12 @@ mixin AppTheme {
           foregroundColor: Colors.white,
           elevation: 2,
         ),
+        appBarTheme: AppBarTheme(
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.white,
+          elevation: 0,
+          
+        ),
         cardTheme: CardThemeData(
             color: const Color(0xFFF9F9F9),
             surfaceTintColor: Colors.transparent,
@@ -32,15 +38,22 @@ mixin AppTheme {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
         inputDecorationTheme: InputDecorationTheme(
+          
+          prefixIconConstraints: BoxConstraints(
+            minWidth: 20,
+            minHeight: 20,
+          ),
+          
           hintStyle: const TextStyle(
-            color: Color(0xFF959595),
+            color:textColorLight,
             fontFamily: 'Fredoka',
+            fontWeight: FontWeight.w300,
             fontSize: 14,
           ),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 16),
           filled: true,
-          fillColor: Colors.white,
+          fillColor:const Color(0xFFF9F9F9),
           errorStyle: const TextStyle(
             color: errorForeground,
             fontFamily: 'Fredoka',
@@ -155,10 +168,8 @@ mixin AppTheme {
   static const _buttonDarkColor = Color(0xFFFFFFFF);
 
   static final _inputBorderLight = OutlineInputBorder(
-    borderRadius: BorderRadius.circular(8),
-    borderSide: const BorderSide(
-      color: Color(0xFFE5E5E5),
-    ),
+    borderRadius: BorderRadius.circular(14),
+    borderSide:  BorderSide.none,
   );
 
   static final _inputBorderDark = OutlineInputBorder(
