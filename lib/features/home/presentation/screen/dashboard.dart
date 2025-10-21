@@ -3,6 +3,7 @@ import 'package:grabit_mobile/core/presentation/utils/custom_state.dart';
 import 'package:grabit_mobile/core/presentation/widgets/bottom_nav_bar.dart';
 import 'package:grabit_mobile/features/home/presentation/manager/home_provider.dart';
 import 'package:grabit_mobile/features/home/presentation/screen/home.dart';
+import 'package:grabit_mobile/features/orders/presentation/screens/orders.dart';
 import 'package:grabit_mobile/features/search/presentation/screens/search.dart';
 import 'package:provider/provider.dart';
 
@@ -23,7 +24,7 @@ class _DashboardScreenState extends CustomState<DashboardScreen> {
     _screens = [
       HomeScreen(),
       SearchScreen(),
-      Container(color: Colors.blue),
+      OrderScreen(),
       Container(color: Colors.pink),
     ];
     super.onStart();

@@ -8,6 +8,8 @@ const clock = 'assets/vectors/clock.svg';
 const add = 'assets/vectors/add.svg';
 const close = 'assets/vectors/close.svg';
 const trending = 'assets/vectors/trending.svg';
+const trash = 'assets/vectors/trash.svg';
+const bicycle = 'assets/vectors/bicycle.svg';
 
 
 //Bottom Nav Icons
@@ -40,4 +42,8 @@ const soups = 'assets/images/soups.png';
 const suya = 'assets/images/suya.png';
 
 //LOTTIE
-const empty = 'assets/lottie/empty.json';
+
+// const onboard1 = 'assets/animations/onboard1.json';
+const onboard1 = 'assets/animations/onboard1.json';
+
+

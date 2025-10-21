@@ -16,13 +16,13 @@ const walletTopDark = Color(0xFF1e1e1e);
 const walletTopLight = Color(0xFF1e1e1e);
 
 const primaryColor = Color(0xFF49B76F);
-const passwordGreen = Color(0xFF0D8536);
 const darkGreen = Color(0xFF093719);
+const green = Color(0xFF007C2B);
 const red = Color(0xFFD5000A);
+const purple = Color(0xFF793BFF);
+const amberBrown = Color(0xFF9F5400);
 final lightGreen = Color(0xFF80FFAC).withValues(alpha: .2);
 const primaColor = Color.fromARGB(255, 212, 219, 1);
 const primColor = Color.fromARGB(255, 219, 1, 1);
 const secondaryColor = Color(0xFFA6F3D2);
-const textAccentLight = Color(0xFF1e1e1e);
-const textAccentDark = Color(0xFF1e1e1e);
-const subBlue = Color(0xFF1e1e1e);
+

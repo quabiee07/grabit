@@ -1,7 +1,6 @@
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:grabit_mobile/core/presentation/theme/colors/colors.dart';
-import 'package:grabit_mobile/core/presentation/theme/colors/snack_bar_colors.dart';
 import 'package:logger/logger.dart';
 
 extension SnackbarStateless on BuildContext {
@@ -59,7 +58,7 @@ Flushbar customFlushBar(String message, [type = 1]) {
     case 2:
       icon = Icons.warning;
       color = primaColor;
-      iconColor = pendingForeground;
+      iconColor = Colors.black;
       break;
     default:
       icon = Icons.error;

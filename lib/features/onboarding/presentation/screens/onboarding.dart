@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:grabit_mobile/core/presentation/resources/drawables.dart';
 import 'package:grabit_mobile/core/presentation/theme/colors/colors.dart';
 import 'package:grabit_mobile/core/presentation/utils/custom_state.dart';
-import 'package:grabit_mobile/core/presentation/utils/helper_functions.dart';
 import 'package:grabit_mobile/core/presentation/utils/navigation_mixin.dart';
 import 'package:grabit_mobile/core/presentation/widgets/button.dart';
-import 'package:grabit_mobile/core/presentation/widgets/custom_image.dart';
 import 'package:grabit_mobile/features/home/presentation/screen/dashboard.dart';
 import 'package:grabit_mobile/features/onboarding/presentation/manager/onboarding_provider.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:sprung/sprung.dart';
 
@@ -23,10 +23,12 @@ class _OnboardingScreenState extends CustomState<OnboardingScreen>
     with SingleTickerProviderStateMixin {
   OnboardingProvider? _provider;
   late PageController _pageController;
+  late final AnimationController _animationController;
 
   @override
   void onStart() {
     _pageController = PageController(initialPage: 0);
+    _animationController = AnimationController(vsync: this);
     super.onStart();
   }
 
@@ -34,6 +36,12 @@ class _OnboardingScreenState extends CustomState<OnboardingScreen>
   void onStarted() {
     _provider?.init();
     super.onStarted();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
   }
 
   @override
@@ -64,14 +72,17 @@ class _OnboardingScreenState extends CustomState<OnboardingScreen>
                               horizontal: index == 0 ? 8 : 16,
                             ),
                             child: Stack(
-                              // crossAxisAlignment: CrossAxisAlignment.center,
-                              // mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Center(
-                                  child: CustomImage(
-                                    width: screenWidth(context),
-                                    asset: state.onboardingPages[index].image,
-                                    fit: BoxFit.cover,
+                                  child: Lottie.asset(
+                                    onboard1,
+                                    controller: _animationController,
+                                    onLoaded: (composition) {
+                                      _animationController
+                                        ..duration = composition.duration
+                                        ..forward()
+                                        ..repeat();
+                                    },
                                   ),
                                 ),
                               ],
