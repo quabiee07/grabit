@@ -1,7 +1,6 @@
+//VECTORS
 const appLogo = 'assets/vectors/grabit_logo.svg';
-const appLogo2 = 'assets/vectors/applogo.svg';
 const arrowLeft = 'assets/vectors/ArrowLeft.svg';
-const addressSvg = 'assets/vectors/Address-amico.svg';
 const locationIcon = 'assets/vectors/location.svg';
 const bell = 'assets/vectors/Bell.svg';
 const clock = 'assets/vectors/clock.svg';
@@ -10,6 +9,16 @@ const close = 'assets/vectors/close.svg';
 const trending = 'assets/vectors/trending.svg';
 const trash = 'assets/vectors/trash.svg';
 const bicycle = 'assets/vectors/bicycle.svg';
+const clockFilled = 'assets/vectors/clock_filled.svg';
+const favorite = 'assets/vectors/favorite.svg';
+const document = 'assets/vectors/document-text.svg';
+const message = 'assets/vectors/message-text.svg';
+const global = 'assets/vectors/global.svg';
+const lock = 'assets/vectors/lock.svg';
+const profile = 'assets/vectors/profile.svg';
+const shootingStar = 'assets/vectors/shooting_star.svg';
+
+
 
 
 //Bottom Nav Icons
@@ -40,10 +49,12 @@ const breakfast = 'assets/images/breakfast.png';
 const pastries = 'assets/images/pastries.png';
 const soups = 'assets/images/soups.png';
 const suya = 'assets/images/suya.png';
+const avatar = 'assets/images/avatar.png';
+// const shootingStar = 'assets/images/shooting_star.png';
+
 
 //LOTTIE
-
-// const onboard1 = 'assets/animations/onboard1.json';
 const onboard1 = 'assets/animations/onboard1.json';
+const onboardLarge = 'assets/animations/onboard_large1.json';
 
 

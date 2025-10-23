@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:grabit_mobile/core/presentation/widgets/custom_tab_bar.dart';
-import 'package:grabit_mobile/features/orders/presentation/widgets/order_item.dart';
+import 'package:grabit_mobile/features/orders/presentation/widgets/cart_tab.dart';
+import 'package:grabit_mobile/features/orders/presentation/widgets/completed_tab.dart';
+import 'package:grabit_mobile/features/orders/presentation/widgets/ongoing_tab.dart';
 
 class OrderScreen extends StatefulWidget {
   const OrderScreen({super.key});
@@ -36,19 +38,7 @@ class _OrderScreenState extends State<OrderScreen> {
                   _selectedIndex = index;
                 });
               },
-              children: List.generate(tabTitles.length, (index) {
-                return ListView.separated(
-                  itemCount: 7,
-                  itemBuilder: (context, index) {
-                    return OrderItem(
-                      isPending: _selectedIndex == 0,
-                      isOngoing: _selectedIndex == 1,
-                      isCompleted: _selectedIndex == 2,
-                    );
-                  },
-                  separatorBuilder: (context, index) => Gap(16),
-                );
-              }),
+              children: [CartTab(), OngoingTab(), CompletedTab()],
             ),
             const Gap(20),
           ],
