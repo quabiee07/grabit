@@ -75,7 +75,7 @@ class _OnboardingScreenState extends CustomState<OnboardingScreen>
                               children: [
                                 Center(
                                   child: Lottie.asset(
-                                    onboard1,
+                                    onboardLarge,
                                     controller: _animationController,
                                     onLoaded: (composition) {
                                       _animationController
