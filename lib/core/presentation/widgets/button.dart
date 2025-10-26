@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:grabit_mobile/core/presentation/theme/colors/colors.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
@@ -32,10 +31,11 @@ class Button extends StatelessWidget {
       child: ElevatedButton(
         onPressed: (!isEnabled || isLoading) ? null : onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: color ??
+          backgroundColor:
+              color ??
               (isLoading
-                  ? secondaryColor
-                  : (isEnabled ? textColorLight : secondaryColor)),
+                  ? disabledGrey
+                  : (isEnabled ? textColorLight : disabledGrey)),
         ),
         child: isLoading == true
             ? LoadingAnimationWidget.waveDots(
@@ -46,7 +46,9 @@ class Button extends StatelessWidget {
                 title,
                 style: theme.textTheme.bodyMedium?.copyWith(
                   fontSize: 14,
-                  color: theme.colorScheme.surface,
+                  color: (isLoading
+                      ? disabledGrey
+                      : (isEnabled ? theme.colorScheme.surface : textGrey)),
                 ),
               ),
       ),
@@ -55,15 +57,16 @@ class Button extends StatelessWidget {
 }
 
 class BorderButton extends StatelessWidget {
-  const BorderButton(
-      {super.key,
-      required this.title,
-      this.isLoading = false,
-      required this.onPressed,
-      this.isEnabled = true,
-      this.width,
-      this.height,
-      this.color});
+  const BorderButton({
+    super.key,
+    required this.title,
+    this.isLoading = false,
+    required this.onPressed,
+    this.isEnabled = true,
+    this.width,
+    this.height,
+    this.color,
+  });
 
   final String title;
   final bool isLoading;
@@ -83,10 +86,12 @@ class BorderButton extends StatelessWidget {
         onPressed: (!isEnabled || isLoading) ? null : onPressed,
         style: OutlinedButton.styleFrom(
           side: BorderSide(
-              color: color ??
-                  (isLoading
-                      ? secondaryColor
-                      : (isEnabled ? primaryColor : secondaryColor))),
+            color:
+                color ??
+                (isLoading
+                    ? secondaryColor
+                    : (isEnabled ? primaryColor : secondaryColor)),
+          ),
         ),
         child: isLoading == true
             ? LoadingAnimationWidget.waveDots(
@@ -96,11 +101,13 @@ class BorderButton extends StatelessWidget {
             : Text(
                 title,
                 style: theme.textTheme.titleLarge?.copyWith(
-                    fontSize: 14,
-                    color: color ??
-                        (isLoading
-                            ? secondaryColor
-                            : (isEnabled ? primaryColor : secondaryColor))),
+                  fontSize: 14,
+                  color:
+                      color ??
+                      (isLoading
+                          ? secondaryColor
+                          : (isEnabled ? primaryColor : secondaryColor)),
+                ),
               ),
       ),
     );

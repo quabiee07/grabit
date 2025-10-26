@@ -59,65 +59,74 @@ class _InputFieldState extends TextFieldState<InputField> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Theme(
-        data: theme.copyWith(
-          inputDecorationTheme: theme.inputDecorationTheme.copyWith(),
-        ),
-        child: TextField(
-          controller: controller,
-          focusNode: focus,
-          readOnly: widget.readOnly,
-          showCursor: true,
-          obscureText: isPassword,
-          maxLines: widget.maxLines,
-          minLines: widget.minLines,
-          maxLength: widget.maxLength,
-          onEditingComplete: widget.onAction,
-          textInputAction: widget.inputAction,
-          style: theme.textTheme.labelMedium,
-          inputFormatters: widget.inputFormatters ?? [],
-          cursorColor: textColorLight,
-          onTapOutside: (_) {
-            focus.unfocus();
-          },
-          decoration: InputDecoration(
-            hintText: widget.hint,
-            errorText: widget.error,
-            prefixIcon: widget.prefix == null
-                ? widget.prefixIcon
-                : CustomImage(asset: widget.prefix!),
-            suffix: widget.isPassword
-                ? Clickable(
-                    onPressed: () => setState(() {
-                      isPassword = !isPassword;
-                    }),
-                    child: Container(
-                      width: 50,
-                      height: 20,
-                      alignment: Alignment.center,
-                      child: Text(
-                        isPassword ? 'Show' : 'Hide',
-                        style: theme.textTheme.bodyMedium?.copyWith(
-                          fontSize: 13,
-                          color: const Color(0xff777777),
-                        ),
+      data: theme.copyWith(
+        inputDecorationTheme: theme.inputDecorationTheme.copyWith(),
+      ),
+      child: TextField(
+        controller: controller,
+        focusNode: focus,
+        readOnly: widget.readOnly,
+        showCursor: true,
+        obscureText: isPassword,
+        maxLines: widget.maxLines,
+        minLines: widget.minLines,
+        maxLength: widget.maxLength,
+        onEditingComplete: widget.onAction,
+        textInputAction: widget.inputAction,
+        style: theme.textTheme.labelMedium,
+        inputFormatters: widget.inputFormatters ?? [],
+        cursorColor: textColorLight,
+        onTapOutside: (_) {
+          focus.unfocus();
+        },
+        decoration: InputDecoration(
+          hintText: widget.hint,
+          errorText: widget.error,
+          prefixIcon: widget.prefix == null
+              ? widget.prefixIcon
+              : CustomImage(asset: widget.prefix!),
+          suffix: widget.isPassword
+              ? Clickable(
+                  onPressed: () => setState(() {
+                    isPassword = !isPassword;
+                  }),
+                  child: Container(
+                    width: 50,
+                    height: 20,
+                    alignment: Alignment.center,
+                    child: Text(
+                      isPassword ? 'Show' : 'Hide',
+                      style: theme.textTheme.bodyMedium?.copyWith(
+                        fontSize: 13,
+                        color: const Color(0xff777777),
                       ),
                     ),
-                  )
-                : widget.isClear && value.isNotEmpty
-                    ? Clickable(
-                        onPressed: () {
-                          controller.clear();
-                        },
-                        child: SvgImage(
-                          asset: '',
-                          width: 24,
-                          height: 24,
-                          color: theme.colorScheme.onSurface.withOpacity(0.7),
-                          fit: BoxFit.scaleDown,
-                        ),
-                      )
-                    : widget.suffix,
+                  ),
+                )
+              : widget.isClear && value.isNotEmpty
+              ? Clickable(
+                  onPressed: () {
+                    controller.clear();
+                  },
+                  child: SvgImage(
+                    asset: '',
+                    width: 24,
+                    height: 24,
+                    color: theme.colorScheme.onSurface.withValues(alpha: .7),
+                    fit: BoxFit.scaleDown,
+                  ),
+                )
+              : widget.suffix,
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(14),
+            borderSide: BorderSide(color: blue),
           ),
-        ));
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(14),
+            borderSide: BorderSide(color: red),
+          ),
+        ),
+      ),
+    );
   }
 }

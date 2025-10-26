@@ -4,7 +4,7 @@ import 'package:grabit_mobile/core/presentation/theme/colors/colors.dart';
 import 'package:grabit_mobile/core/presentation/utils/custom_state.dart';
 import 'package:grabit_mobile/core/presentation/utils/navigation_mixin.dart';
 import 'package:grabit_mobile/core/presentation/widgets/button.dart';
-import 'package:grabit_mobile/features/home/presentation/screen/dashboard.dart';
+import 'package:grabit_mobile/features/auth/presentation/screens/register.dart';
 import 'package:grabit_mobile/features/onboarding/presentation/manager/onboarding_provider.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
@@ -139,11 +139,11 @@ class _OnboardingScreenState extends CustomState<OnboardingScreen>
                           ),
                           const Gap(38),
                           Button(
-                            title: provider.isEnd ? 'Continue' : 'Next',
+                            title: provider.isEnd ? 'Get Started' : 'Next',
                             onPressed: () {
                               if (provider.isEnd) {
                                 // _provider?.setOnboarding();
-                                context.pushNamedAndClear(DashboardScreen.id);
+                                context.pushNamedAndClear(RegisterScreen.id);
                               } else {
                                 _pageController.animateToPage(
                                   state.currentIndex + 1,

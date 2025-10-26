@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:grabit_mobile/core/presentation/manager/theme_provider.dart';
 import 'package:grabit_mobile/core/presentation/utils/custom_state.dart';
+import 'package:grabit_mobile/features/auth/presentation/screens/login.dart';
+import 'package:grabit_mobile/features/auth/presentation/screens/register.dart';
 import 'package:grabit_mobile/features/home/presentation/screen/dashboard.dart';
 import 'package:grabit_mobile/features/onboarding/presentation/screens/onboarding.dart';
 import 'package:grabit_mobile/features/onboarding/presentation/screens/splash.dart';
@@ -35,7 +37,8 @@ class GrabitApp extends StatelessWidget {
               SplashScreen.id: (context) => const SplashScreen(),
               OnboardingScreen.id: (context) => const OnboardingScreen(),
               DashboardScreen.id: (context) => const DashboardScreen(),
-              // LoginScreen.id: (context) => const LoginScreen(),
+              LoginScreen.id: (context) => const LoginScreen(),
+              RegisterScreen.id: (context) => const RegisterScreen(),
               // ForgotPasswordScreen.id: (context) =>
               //     const ForgotPasswordScreen(),
               // VerifyAccountScreen.id: (context) => const VerifyAccountScreen(),

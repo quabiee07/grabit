@@ -1,7 +1,8 @@
 //VECTORS
 const appLogo = 'assets/vectors/grabit_logo.svg';
-const arrowLeft = 'assets/vectors/arrow-down.svg';
+const arrowLeft = 'assets/vectors/arrow_left.svg';
 const arrowRight = 'assets/vectors/arrow_right.svg';
+const arrowDown = 'assets/vectors/arrow_down.svg';
 const locationIcon = 'assets/vectors/location.svg';
 const locationOutline = 'assets/vectors/location_outline.svg';
 const bell = 'assets/vectors/Bell.svg';
@@ -20,6 +21,7 @@ const global = 'assets/vectors/global.svg';
 const lock = 'assets/vectors/lock.svg';
 const profile = 'assets/vectors/profile.svg';
 const send = 'assets/vectors/send.svg';
+const check = 'assets/vectors/check.svg';
 const shootingStar = 'assets/vectors/shooting_star.svg';
 
 //Bottom Nav Icons
@@ -56,6 +58,8 @@ const map = 'assets/images/map.png';
 const mamaKitchen = 'assets/images/mama_kitchen.png';
 const egusi = 'assets/images/egusi.png';
 const fries = 'assets/images/fries.jpg';
+const google = 'assets/images/google.png';
+const apple = 'assets/images/apple.png';
 
 //LOTTIE
 const onboard1 = 'assets/animations/onboard1.json';

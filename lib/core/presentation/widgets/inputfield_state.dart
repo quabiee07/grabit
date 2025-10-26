@@ -24,6 +24,7 @@ abstract class TextFieldState<T extends TextFieldParent> extends CustomState<T> 
   @override
   void onStart() {
     controller = TextEditingController(text: widget.value);
+    isPassword = widget.isPassword;
     focus.addListener(_onFocusChange);
     super.onStart();
   }

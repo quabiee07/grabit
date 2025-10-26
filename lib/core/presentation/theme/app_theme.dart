@@ -71,7 +71,7 @@ mixin AppTheme {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: primaryColor,
-            disabledBackgroundColor: secondaryColor,
+            disabledBackgroundColor: disabledGrey,
             minimumSize: const Size(double.infinity, double.infinity),
             foregroundColor: Colors.white,
             shadowColor: buttonColor.withValues(alpha:0.05),
