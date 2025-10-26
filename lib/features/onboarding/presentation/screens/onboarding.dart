@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:grabit_mobile/core/presentation/resources/drawables.dart';
 import 'package:grabit_mobile/core/presentation/theme/colors/colors.dart';
 import 'package:grabit_mobile/core/presentation/utils/custom_state.dart';
 import 'package:grabit_mobile/core/presentation/utils/navigation_mixin.dart';
@@ -75,7 +74,7 @@ class _OnboardingScreenState extends CustomState<OnboardingScreen>
                               children: [
                                 Center(
                                   child: Lottie.asset(
-                                    onboardLarge,
+                                    state.onboardingPages[index].image,
                                     controller: _animationController,
                                     onLoaded: (composition) {
                                       _animationController

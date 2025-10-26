@@ -5,7 +5,7 @@ import 'package:grabit_mobile/core/presentation/theme/colors/colors.dart';
 import 'package:grabit_mobile/features/profile/presentation/widgets/custom_chip.dart';
 import 'package:grabit_mobile/features/profile/presentation/widgets/premium_card.dart';
 import 'package:grabit_mobile/features/profile/presentation/widgets/profile_image.dart';
-import 'package:grabit_mobile/features/profile/presentation/widgets/row_item.dart';
+import 'package:grabit_mobile/features/profile/presentation/widgets/row_icon_item.dart';
 import 'package:grabit_mobile/features/profile/presentation/widgets/statistic_card.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -110,33 +110,41 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: Column(
                 spacing: 10,
                 children: [
-                  RowItem(
+                  RowIconItem(
                     icon: profile,
                     title: 'Personal details',
                     onPressed: () {},
                   ),
                   Divider(color: borderColor),
-                  RowItem(icon: global, title: 'Language', onPressed: () {}),
+                  RowIconItem(
+                    icon: global,
+                    title: 'Language',
+                    onPressed: () {},
+                  ),
                   Divider(color: borderColor),
-                  RowItem(
+                  RowIconItem(
                     icon: locationIcon,
                     title: 'Address',
                     onPressed: () {},
                   ),
                   Divider(color: borderColor),
-                  RowItem(
+                  RowIconItem(
                     icon: lock,
                     title: 'Privacy Policy',
                     onPressed: () {},
                   ),
                   Divider(color: borderColor),
-                  RowItem(
+                  RowIconItem(
                     icon: document,
                     title: 'Terms of Use',
                     onPressed: () {},
                   ),
                   Divider(color: borderColor),
-                  RowItem(icon: message, title: 'Feedback', onPressed: () {}),
+                  RowIconItem(
+                    icon: message,
+                    title: 'Feedback',
+                    onPressed: () {},
+                  ),
                 ],
               ),
             ),
@@ -164,13 +172,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: Column(
                 spacing: 10,
                 children: [
-                  RowItem(
+                  RowIconItem(
                     icon: profile,
                     title: 'Delete account',
                     onPressed: () {},
                   ),
                   Divider(color: borderColor),
-                  RowItem(icon: global, title: 'Log out', onPressed: () {}),
+                  RowIconItem(icon: global, title: 'Log out', onPressed: () {}),
                 ],
               ),
             ),

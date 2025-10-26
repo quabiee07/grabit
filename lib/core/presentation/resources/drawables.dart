@@ -1,10 +1,13 @@
 //VECTORS
 const appLogo = 'assets/vectors/grabit_logo.svg';
-const arrowLeft = 'assets/vectors/ArrowLeft.svg';
+const arrowLeft = 'assets/vectors/arrow-down.svg';
+const arrowRight = 'assets/vectors/arrow_right.svg';
 const locationIcon = 'assets/vectors/location.svg';
+const locationOutline = 'assets/vectors/location_outline.svg';
 const bell = 'assets/vectors/Bell.svg';
 const clock = 'assets/vectors/clock.svg';
 const add = 'assets/vectors/add.svg';
+const minus = 'assets/vectors/minus.svg';
 const close = 'assets/vectors/close.svg';
 const trending = 'assets/vectors/trending.svg';
 const trash = 'assets/vectors/trash.svg';
@@ -16,10 +19,8 @@ const message = 'assets/vectors/message-text.svg';
 const global = 'assets/vectors/global.svg';
 const lock = 'assets/vectors/lock.svg';
 const profile = 'assets/vectors/profile.svg';
+const send = 'assets/vectors/send.svg';
 const shootingStar = 'assets/vectors/shooting_star.svg';
-
-
-
 
 //Bottom Nav Icons
 const homeOutline = 'assets/vectors/home_outline.svg';
@@ -30,6 +31,7 @@ const boxOutline = 'assets/vectors/box_outline.svg';
 const boxFilled = 'assets/vectors/box_filled.svg';
 const userOutline = 'assets/vectors/user_outline.svg';
 const userFilled = 'assets/vectors/user_filled.svg';
+const info = 'assets/vectors/info-circle.svg';
 
 //IMAGES
 const onboarding1 = 'assets/images/onboard_img1.png';
@@ -50,11 +52,12 @@ const pastries = 'assets/images/pastries.png';
 const soups = 'assets/images/soups.png';
 const suya = 'assets/images/suya.png';
 const avatar = 'assets/images/avatar.png';
-// const shootingStar = 'assets/images/shooting_star.png';
-
+const map = 'assets/images/map.png';
+const mamaKitchen = 'assets/images/mama_kitchen.png';
+const egusi = 'assets/images/egusi.png';
+const fries = 'assets/images/fries.jpg';
 
 //LOTTIE
 const onboard1 = 'assets/animations/onboard1.json';
 const onboardLarge = 'assets/animations/onboard_large1.json';
-
-
+const onboard2 = 'assets/animations/onboard2.json';

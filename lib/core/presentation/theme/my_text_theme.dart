@@ -45,7 +45,7 @@ class MyTextTheme {
           color: _color1d,
           fontFamily: 'Fredoka',
           fontSize: 16,
-          fontWeight: FontWeight.w700),
+          fontWeight: FontWeight.w500),
       titleSmall: TextStyle(
           color: _color1d,
           fontFamily: 'Fredoka',

@@ -22,6 +22,8 @@ class PopWidget extends StatelessWidget {
           padding: const EdgeInsets.all(8),
           child: SvgImage(
             asset: arrowLeft,
+            height: 24,
+            width: 24,
             color: theme.colorScheme.onSurface,
           ),
         ));
