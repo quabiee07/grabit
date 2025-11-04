@@ -17,7 +17,7 @@ class OnboardingState {
           'Know exactly when your meal leaves the kitchen and when it’ll arrive — down to the minute.',
     ),
     OnboardingModel(
-      image: onboard1,
+      image: onboard3,
       title: 'Delivered fresh, just the way you like it.',
       description:
           'From quick bites to full feasts, we bring every meal to your doorstep, hot, fast, & full of flavor.',

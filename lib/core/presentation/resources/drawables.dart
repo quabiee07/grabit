@@ -65,3 +65,4 @@ const apple = 'assets/images/apple.png';
 const onboard1 = 'assets/animations/onboard1.json';
 const onboardLarge = 'assets/animations/onboard_large1.json';
 const onboard2 = 'assets/animations/onboard2.json';
+const onboard3 = 'assets/animations/onboard3.json';
