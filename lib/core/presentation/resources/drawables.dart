@@ -23,6 +23,13 @@ const profile = 'assets/vectors/profile.svg';
 const send = 'assets/vectors/send.svg';
 const check = 'assets/vectors/check.svg';
 const shootingStar = 'assets/vectors/shooting_star.svg';
+const messageIcon = 'assets/vectors/message.svg';
+const boxTick = 'assets/vectors/box-tick.svg';
+const locationTick = 'assets/vectors/location-tick.svg';
+const firePit = 'assets/vectors/fire-pit.svg';
+const tickDouble = 'assets/vectors/tick-double-03.svg';
+const truckFast = 'assets/vectors/truck-fast.svg';
+
 
 //Bottom Nav Icons
 const homeOutline = 'assets/vectors/home_outline.svg';
@@ -34,6 +41,7 @@ const boxFilled = 'assets/vectors/box_filled.svg';
 const userOutline = 'assets/vectors/user_outline.svg';
 const userFilled = 'assets/vectors/user_filled.svg';
 const info = 'assets/vectors/info-circle.svg';
+const call = 'assets/vectors/call.svg';
 
 //IMAGES
 const onboarding1 = 'assets/images/onboard_img1.png';
@@ -60,6 +68,8 @@ const egusi = 'assets/images/egusi.png';
 const fries = 'assets/images/fries.jpg';
 const google = 'assets/images/google.png';
 const apple = 'assets/images/apple.png';
+const man = 'assets/images/smiley_man.jpg';
+
 
 //LOTTIE
 const onboard1 = 'assets/animations/onboard1.json';

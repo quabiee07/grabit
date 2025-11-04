@@ -101,3 +101,21 @@ Future<bool> enableLocation({
   }
   return true; // Service & permission granted
 }
+
+String formatPrice(double price) {
+    // Format number with comma separator
+    String priceStr = price.toStringAsFixed(0);
+    String result = '';
+    int count = 0;
+    
+    for (int i = priceStr.length - 1; i >= 0; i--) {
+      if (count == 3) {
+        result = ',$result';
+        count = 0;
+      }
+      result = priceStr[i] + result;
+      count++;
+    }
+    
+    return result;
+  }
